@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github Delete Option</title>
+</head>
+<body>
+    <!-- Hide Show Element -->
+    <!-- <h1 id="secret-info">My Secret info</h1>
+    <button id="btn-delete">Delete</button>
+    <button id="btn-reset">Reset</button> -->
+
+    <!-- Github delete option setup -->
+    <h1 id="secret-info">Delete this text when delete button is enabled</h1>
+    <input id='delete-confirm' type="text" placeholder="Please type Delete">
+    <button id="btn-delete" disabled>Delete</button>
+    <button id="btn-reset">Reset</button>
+
+
+    <script>
+
+        // Hide or show element
+        // document.getElementById('btn-delete').addEventListener('click',function(){
+        //     const secret = document.getElementById('secret-info');
+        //     secret.style.visibility = 'hidden';
+        // })
+        // document.getElementById('btn-reset').addEventListener('click',function(){
+        //     const secret = document.getElementById('secret-info');
+        //     secret.style.visibility = 'visible';
+        // })
+
+        // Github delete option setup
+        document.getElementById('delete-confirm').addEventListener('keyup',function(event){
+           const text = event.target.value;
+           const deleteBtn = document.getElementById('btn-delete');
+           if(text === 'delete'){
+            deleteBtn.removeAttribute('disabled');
+           } else {
+            deleteBtn.setAttribute('disabled', true)
+           }
+        })
+
+        document.getElementById('btn-delete').addEventListener('click',function(){
+            const secret = document.getElementById('secret-info');
+            secret.style.visibility = 'hidden';
+            document.getElementById('delete-confirm').value = '';
+        })
+
+        document.getElementById('btn-reset').addEventListener('click',function(){
+            const secret = document.getElementById('secret-info');
+            secret.style.visibility = 'visible';
+            window.location.reload(true)
+        })
+    </script>
+</body>
+</html>

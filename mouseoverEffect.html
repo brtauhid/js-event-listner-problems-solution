@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="myParagraph">Hover over me</p>
+
+    <script>
+        const paragraph = document.getElementById('myParagraph');
+
+        paragraph.addEventListener('mouseover', function() {
+            paragraph.style.backgroundColor = 'lightblue';
+        });
+
+        paragraph.addEventListener('mouseout', function() {
+            paragraph.style.backgroundColor = 'white';
+        });
+
+    </script>
+
+<!-- Problem 4: Mouseover Effect
+This problem changes the background color of a paragraph when the mouse is over it. We select the paragraph using document.getElementById() and add event listeners for the 'mouseover' and 'mouseout' events. When the mouse is over the paragraph, the event listener changes its background color to 'lightblue', and when the mouse moves out, it changes the color back to 'white'. -->
+</body>
+</html>

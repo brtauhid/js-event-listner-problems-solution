@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Press a key</p>
+
+
+    <script>
+        document.addEventListener('keydown', function(event) {
+            alert('Key pressed! Key code: ' + event.keyCode);
+        });
+
+    </script>
+
+<!-- Problem 5: Key Press Event
+This problem displays the key code when a key is pressed. We add a keydown event listener to the document. When a key is pressed, the event listener triggers an alert displaying the key code obtained from the keyCode property of the event object. -->
+</body>
+</html>
